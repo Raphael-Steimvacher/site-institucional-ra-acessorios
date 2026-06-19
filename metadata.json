@@ -1,0 +1,6 @@
+{
+  "name": "RA Acessórios e Vidraçaria",
+  "description": "Landing page de alta conversão para serviços premium de vidraçaria, sacadas, fachadas e box de banheiro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
