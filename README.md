@@ -1,20 +1,55 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Codex Starter Kit
 
-# Run and deploy your AI Studio app
+Starter kit de instruções para usar em projetos com Next.js, TypeScript, Tailwind, Shadcn UI, Radix UI e arquitetura organizada por camadas.
 
-This contains everything you need to run your app locally.
+A ideia é copiar este conteúdo para a raiz de qualquer repositório novo e fazer o Codex trabalhar seguindo o mesmo padrão de arquitetura, front-end, back-end, UI/UX, responsividade e revisão de código.
 
-View your app in AI Studio: https://ai.studio/apps/00176d71-c639-413f-a754-4d1cfc12dd12
+## Como usar
 
-## Run Locally
+1. Copie o arquivo `AGENTS.md` e a pasta `.codex/` para a raiz do seu projeto.
+2. Abra o projeto no Codex.
+3. Antes de pedir uma feature, diga algo como:
 
-**Prerequisites:**  Node.js
+```txt
+Leia o AGENTS.md e siga as diretrizes da pasta .codex antes de implementar.
+Quero construir uma landing page/site institucional/dashboard conforme os arquivos de referência.
+```
 
+4. Para tarefas específicas, use os prompts em `.codex/prompts/`.
+5. Ao finalizar uma tarefa, peça revisão usando `.codex/code-review.md` e `.codex/checklists/done.md`.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Estrutura
+
+```txt
+.
+├── AGENTS.md
+└── .codex/
+    ├── README.md
+    ├── project-rules.md
+    ├── stack.md
+    ├── architecture.md
+    ├── frontend.md
+    ├── backend.md
+    ├── api-rest.md
+    ├── database-repository.md
+    ├── forms-validation.md
+    ├── data-fetching.md
+    ├── design-system.md
+    ├── ui-ux.md
+    ├── responsiveness.md
+    ├── seo-accessibility-performance.md
+    ├── auth-security.md
+    ├── landing-page.md
+    ├── institutional-site.md
+    ├── dashboard.md
+    ├── testing.md
+    ├── code-review.md
+    ├── workflow.md
+    ├── prompts/
+    ├── templates/
+    └── checklists/
+```
+
+## Regra principal
+
+O Codex deve agir como um desenvolvedor sênior que entende produto, arquitetura, UX, performance e manutenção de código. Ele não deve apenas gerar código: deve analisar o contexto, reutilizar o que já existe, propor uma estrutura clara, implementar com qualidade e revisar antes de considerar pronto.
