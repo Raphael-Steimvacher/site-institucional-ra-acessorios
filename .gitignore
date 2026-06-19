@@ -1,8 +1,21 @@
+# dependencies
 node_modules/
+.pnpm-store/
+
+# Next.js build output
+.next/
+out/
 build/
 dist/
 coverage/
-.DS_Store
-*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# environment files
 .env*
 !.env.example
+
+# local tooling
+.DS_Store
+*.log
