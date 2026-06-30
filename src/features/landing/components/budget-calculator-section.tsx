@@ -18,26 +18,40 @@ const currencyFormatter = new Intl.NumberFormat("pt-BR", {
   maximumFractionDigits: 0,
 });
 
+function getDefaultHeight(glassTypeKey: string, minHeight: number) {
+  return glassTypeKey === "box" ? 1.9 : minHeight;
+}
+
 export function BudgetCalculatorSection() {
   const [glassTypeKey, setGlassTypeKey] = useState(GLASS_TYPES[0].key);
-  const [width, setWidth] = useState(1.2);
+  const [width, setWidth] = useState(1.5);
   const selectedGlassType = GLASS_TYPES.find((item) => item.key === glassTypeKey) ?? GLASS_TYPES[0];
-  const [height, setHeight] = useState(selectedGlassType.minHeight);
+  const [height, setHeight] = useState(
+    getDefaultHeight(selectedGlassType.key, selectedGlassType.minHeight),
+  );
 
   const estimate = useMemo(
     () => width * height * selectedGlassType.basePricePerSqm,
     [height, selectedGlassType.basePricePerSqm, width],
   );
+  const area = width * height;
+  const formattedEstimate = currencyFormatter.format(estimate);
 
   function handleTypeChange(value: string) {
     const nextType = GLASS_TYPES.find((item) => item.key === value);
     if (!nextType) return;
 
     setGlassTypeKey(value);
-    setHeight(nextType.minHeight);
+    setHeight(getDefaultHeight(nextType.key, nextType.minHeight));
   }
 
-  const whatsappMessage = `Olá! Fiz uma simulação no site da RA para ${selectedGlassType.name}, com aproximadamente ${width.toFixed(1)}m de largura por ${height.toFixed(1)}m de altura. Gostaria de confirmar um orçamento.`;
+  const whatsappMessage = [
+    `Olá! Fiz uma simulação no site da RA para ${selectedGlassType.name}.`,
+    `Medidas aproximadas: ${width.toFixed(1)}m de largura por ${height.toFixed(1)}m de altura.`,
+    `Área aproximada: ${area.toFixed(2)} m².`,
+    `Estimativa inicial exibida no site: ${formattedEstimate}.`,
+    "Gostaria de confirmar um orçamento.",
+  ].join("\n");
 
   return (
     <section id="calculator" className="bg-neutral-950 py-16 md:py-24">
@@ -91,9 +105,9 @@ export function BudgetCalculatorSection() {
                   <span className="font-mono text-xs font-bold uppercase tracking-wider">Estimativa inicial</span>
                 </div>
                 <p className="mt-5 font-display text-4xl font-extrabold text-white">
-                  {currencyFormatter.format(estimate)}
+                  {formattedEstimate}
                 </p>
-                <p className="mt-2 text-sm text-zinc-400">Área aproximada: {(width * height).toFixed(2)} m²</p>
+                <p className="mt-2 text-sm text-zinc-400">Área aproximada: {area.toFixed(2)} m²</p>
                 <div className="mt-6 rounded-lg border border-white/5 bg-black/20 p-4">
                   <p className="text-sm font-semibold text-white">Recomendação técnica</p>
                   <p className="mt-2 text-xs leading-relaxed text-zinc-400">{selectedGlassType.recommendation}</p>

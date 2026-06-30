@@ -105,7 +105,7 @@ export function HeroSection() {
             <Button asChild variant="premium" size="lg">
               <a
                 href={createWhatsappUrl(
-                  "Olá! Vi a landing page da RA Acessórios e Vidraçaria e gostaria de fazer um orçamento sem compromisso.",
+                  "Olá! Vi seu anúncio na RA Acessórios e Vidraçaria e gostaria de fazer um orçamento sem compromisso.",
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -186,7 +186,7 @@ export function HeroSection() {
                   </h3>
                   <p className="mt-1 text-xs leading-relaxed text-zinc-400">
                     Visitas para condomínios, empresas e residências de alto
-                    padrão em Ferraz de Vasconcelos e região.
+                    padrão em Poá e região.
                   </p>
                 </div>
               </div>

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "RA Acessórios e Vidraçaria | Orçamento de Vidros em SP",
   description:
-    "Vidraçaria em Ferraz de Vasconcelos para sacadas, fachadas glazing, box, guarda-corpos, espelhos e projetos sob medida. Peça orçamento pelo WhatsApp.",
+    "Vidraçaria em Poá e região para sacadas, fachadas glazing, box, guarda-corpos, espelhos e projetos sob medida. Peça orçamento pelo WhatsApp.",
   applicationName: "RA Acessórios e Vidraçaria",
   keywords: [
     "vidraçaria",
@@ -31,7 +31,8 @@ export const metadata: Metadata = {
     "box de banheiro",
     "fachada glazing",
     "guarda-corpo de vidro",
-    "Ferraz de Vasconcelos",
+    "Poá",
+    "Vila Monteiro",
   ],
   authors: [{ name: "RA Acessórios e Vidraçaria" }],
   openGraph: {

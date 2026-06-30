@@ -44,7 +44,7 @@ export function ContactSection() {
             <div>
               <h2 className="font-display text-3xl font-bold">Vamos tirar seu projeto do papel?</h2>
               <p className="mt-3 max-w-lg text-sm leading-relaxed text-zinc-400">
-                Envie os dados básicos e abra uma conversa com nossa equipe. Atendemos Ferraz de Vasconcelos e cidades da região metropolitana de São Paulo.
+                Envie os dados básicos e abra uma conversa com nossa equipe. Atendemos Poá e cidades da região metropolitana de São Paulo.
               </p>
             </div>
 
@@ -78,14 +78,32 @@ export function ContactSection() {
                   <FormField control={form.control} name="name" render={({ field }) => (
                     <FormItem>
                       <FormLabel>Seu nome</FormLabel>
-                      <FormControl><Input placeholder="Como podemos chamar você?" autoComplete="name" {...field} /></FormControl>
+                      <FormControl>
+                        <Input
+                          placeholder="Como podemos chamar você?"
+                          autoComplete="name"
+                          data-lpignore="true"
+                          data-1p-ignore="true"
+                          {...field}
+                        />
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )} />
                   <FormField control={form.control} name="phone" render={({ field }) => (
                     <FormItem>
                       <FormLabel>WhatsApp</FormLabel>
-                      <FormControl><Input type="tel" inputMode="tel" placeholder="(11) 99999-9999" autoComplete="tel" {...field} /></FormControl>
+                      <FormControl>
+                        <Input
+                          type="tel"
+                          inputMode="tel"
+                          placeholder="(11) 99999-9999"
+                          autoComplete="tel"
+                          data-lpignore="true"
+                          data-1p-ignore="true"
+                          {...field}
+                        />
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )} />
@@ -107,7 +125,15 @@ export function ContactSection() {
                 <FormField control={form.control} name="message" render={({ field }) => (
                   <FormItem>
                     <FormLabel>Conte um pouco sobre o projeto</FormLabel>
-                    <FormControl><Textarea rows={4} placeholder="Ambiente, medidas aproximadas e cidade..." {...field} /></FormControl>
+                    <FormControl>
+                      <Textarea
+                        rows={4}
+                        placeholder="Ambiente, medidas aproximadas e cidade..."
+                        data-lpignore="true"
+                        data-1p-ignore="true"
+                        {...field}
+                      />
+                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )} />

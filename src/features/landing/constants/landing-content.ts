@@ -13,11 +13,11 @@ import type {
 export const CONTACT_DATA: ContactInfo = {
   phone: "5511998196902",
   phoneFormatted: "(11) 99819-6902",
-  address: "R. dos Ipês, nº 320 - Ferraz de Vasconcelos - São Paulo / SP",
+  address: "R. Brg. Eduardo Gomes, 80 - Vila Monteiro, Poá - SP, 08557-520",
   addressMapUrl:
-    "https://maps.google.com/?q=Rua+dos+Ipes+320+Ferraz+de+Vasconcelos+Sao+Paulo",
+    "https://maps.google.com/?q=R.+Brg.+Eduardo+Gomes,+80+-+Vila+Monteiro,+Poa+-+SP,+08557-520",
   hours: "Segunda a Sexta: 8h às 18h | Sábado: 8h às 13h",
-  email: "contato@raacessoriosevidracaria.com.br",
+  email: "robertoyaya@gmail.com",
 };
 
 export const WORK_SLIDES: WorkSlide[] = [
