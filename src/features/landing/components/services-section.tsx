@@ -38,7 +38,7 @@ export function ServicesSection() {
                 className="group overflow-hidden border-white/10 bg-neutral-950/70 transition-transform duration-300 hover:-translate-y-1"
               >
                 <CardHeader>
-                  <div className={`mb-4 flex size-12 items-center justify-center rounded-xl bg-gradient-to-br ${service.colorClassName}`}>
+                  <div className={`mb-4 flex size-12 items-center justify-center rounded-xl bg-linear-to-br ${service.colorClassName}`}>
                     <Icon className="size-6 text-amber-400" aria-hidden="true" />
                   </div>
                   <CardTitle className="font-display text-lg leading-snug text-white">

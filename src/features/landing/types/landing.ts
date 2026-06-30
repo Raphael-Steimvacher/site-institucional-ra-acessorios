@@ -34,13 +34,15 @@ export type MainService = {
   colorClassName: string;
 };
 
-export type GlassThickness = "8mm" | "10mm";
+export type GlassColorKey = "incolor" | "verde" | "fume";
 
-export type GlassType = {
+export type GlassColor = {
+  key: GlassColorKey;
+  name: string;
+};
+
+export type BudgetProduct = {
   key: string;
   name: string;
-  basePricePerSqm: number;
-  recommendation: string;
-  minHeight: number;
-  maxHeight: number;
+  pricesPerSqm: Record<GlassColorKey, number>;
 };

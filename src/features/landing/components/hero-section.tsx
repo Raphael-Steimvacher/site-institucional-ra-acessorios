@@ -41,8 +41,8 @@ export function HeroSection() {
       id="hero"
       className="relative flex min-h-screen items-center overflow-hidden bg-glass-dark pb-16 pt-32"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0d_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(191,137,62,0.16),_transparent_48%),linear-gradient(to_bottom,_rgba(8,9,13,0.3),_#050506)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0d_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-size-[4rem_4rem]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(191,137,62,0.16),transparent_48%),linear-gradient(to_bottom,rgba(8,9,13,0.3),#050506)]" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
         <div className="flex flex-col gap-6 text-left lg:col-span-7">
@@ -68,7 +68,7 @@ export function HeroSection() {
           >
             <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               Transforme seus espaços com{" "}
-              <span className="bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-amber-400 via-yellow-200 to-amber-500 bg-clip-text text-transparent">
                 vidros sob medida
               </span>
             </h1>
@@ -157,7 +157,7 @@ export function HeroSection() {
           className="lg:col-span-5"
         >
           <div className="overflow-hidden rounded-xl border border-glass-border bg-neutral-950 shadow-2xl">
-            <div className="relative aspect-[4/3]">
+            <div className="relative aspect-4/3">
               <Image
                 src={heroImage.image}
                 alt="Sacada envidraçada instalada pela RA Acessórios e Vidraçaria"
@@ -166,7 +166,7 @@ export function HeroSection() {
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-white/10 bg-black/65 p-4 backdrop-blur-md">
                 <p className="font-mono text-[10px] uppercase tracking-widest text-amber-400">
                   Projeto em destaque
@@ -178,7 +178,7 @@ export function HeroSection() {
             </div>
 
             <div className="grid gap-3 p-5">
-              <div className="flex items-start gap-3 rounded-lg border border-white/5 bg-white/[0.03] p-4">
+              <div className="flex items-start gap-3 rounded-lg border border-white/5 bg-white/3 p-4">
                 <Building2 className="mt-0.5 size-5 shrink-0 text-indigo-400" />
                 <div>
                   <h3 className="font-semibold text-white">
@@ -190,7 +190,7 @@ export function HeroSection() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 rounded-lg border border-white/5 bg-white/[0.03] p-4">
+              <div className="flex items-start gap-3 rounded-lg border border-white/5 bg-white/3 p-4">
                 <UserCheck className="mt-0.5 size-5 shrink-0 text-emerald-400" />
                 <div>
                   <h3 className="font-semibold text-white">

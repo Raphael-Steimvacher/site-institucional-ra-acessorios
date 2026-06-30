@@ -3,8 +3,9 @@ import facadeImage from "@/assets/images/glass_facade_fachadas_1781832761890.jpg
 import showerImage from "@/assets/images/glass_shower_box_1781832777334.jpg";
 
 import type {
+  BudgetProduct,
   ContactInfo,
-  GlassType,
+  GlassColor,
   MainService,
   ServiceCard,
   WorkSlide,
@@ -142,40 +143,48 @@ export const OTHER_SERVICES: ServiceCard[] = [
   },
 ];
 
-export const GLASS_TYPES: GlassType[] = [
+export const GLASS_COLORS: GlassColor[] = [
   {
-    key: "box",
-    name: "Box de Banheiro",
-    basePricePerSqm: 420,
-    recommendation: "Vidro temperado incolor 8mm de alta resistência mecânica.",
-    minHeight: 1.8,
-    maxHeight: 2.2,
+    key: "incolor",
+    name: "Incolor",
   },
   {
-    key: "sacada",
-    name: "Envidraçamento de Sacadas",
-    basePricePerSqm: 850,
-    recommendation:
-      "Vidro laminado temperado 10mm estrutural com perfil articulado.",
-    minHeight: 1.4,
-    maxHeight: 2.6,
+    key: "verde",
+    name: "Verde",
+  },
+  {
+    key: "fume",
+    name: "Fumê",
+  },
+];
+
+export const BUDGET_PRODUCTS: BudgetProduct[] = [
+  {
+    key: "box",
+    name: "Box de banheiro",
+    pricesPerSqm: {
+      incolor: 360,
+      verde: 400,
+      fume: 400,
+    },
   },
   {
     key: "guardacorpo",
-    name: "Guarda-Corpos",
-    basePricePerSqm: 980,
-    recommendation:
-      "Vidro triplo laminado estrutural fixado em torre de aço AISI 304.",
-    minHeight: 0.9,
-    maxHeight: 1.2,
+    name: "Guarda-corpo",
+    pricesPerSqm: {
+      incolor: 600,
+      verde: 700,
+      fume: 700,
+    },
   },
   {
-    key: "espelho",
-    name: "Espelho Lapidado Premium",
-    basePricePerSqm: 380,
-    recommendation: "Espelho nacional de 4mm com lapidação ou bisotê.",
-    minHeight: 0.5,
-    maxHeight: 2.4,
+    key: "janela-porta-porta-balcao",
+    name: "Janela, porta e porta balcão",
+    pricesPerSqm: {
+      incolor: 530,
+      verde: 600,
+      fume: 600,
+    },
   },
 ];
 

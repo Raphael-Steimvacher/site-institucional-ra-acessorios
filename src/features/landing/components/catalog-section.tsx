@@ -74,7 +74,7 @@ export function CatalogSection() {
 
   return (
     <section id="portfolio" className="relative bg-neutral-950 py-16 text-white md:py-24">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-3 text-left">
@@ -121,9 +121,9 @@ export function CatalogSection() {
         </Tabs>
 
         {activeSlide ? (
-          <div className="overflow-hidden rounded-xl border border-white/5 bg-gradient-to-b from-neutral-900/70 to-neutral-950 shadow-2xl">
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-linear-to-b from-neutral-900/70 to-neutral-950 shadow-2xl">
             <div className="grid gap-8 p-4 sm:p-6 lg:grid-cols-12 lg:p-8">
-              <div className="relative h-72 overflow-hidden rounded-lg sm:h-96 lg:col-span-7 lg:h-[420px]">
+              <div className="relative h-72 overflow-hidden rounded-lg sm:h-96 lg:col-span-7 lg:h-105">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeSlide.id}
@@ -142,7 +142,7 @@ export function CatalogSection() {
                     />
                   </motion.div>
                 </AnimatePresence>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/15 to-transparent" />
                 <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/70 px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-widest text-amber-400 backdrop-blur-md">
                   Projeto {currentIndex + 1} de {filteredSlides.length}
                 </div>

@@ -76,6 +76,9 @@ function FormItem({ className, ...props }: React.ComponentProps<"div">) {
     <FormItemContext.Provider value={{ id }}>
       <div
         data-slot="form-item"
+        data-lpignore="true"
+        data-1p-ignore="true"
+        suppressHydrationWarning
         className={cn("space-y-2", className)}
         {...props}
       />
