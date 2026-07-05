@@ -34,7 +34,8 @@ function scrollToCalculator() {
 }
 
 export function HeroSection() {
-  const heroImage = WORK_SLIDES[0];
+  const heroImage =
+    WORK_SLIDES.find((workSlide) => workSlide.id === "box-1") ?? WORK_SLIDES[0];
 
   return (
     <section
@@ -160,7 +161,7 @@ export function HeroSection() {
             <div className="relative aspect-4/3">
               <Image
                 src={heroImage.image}
-                alt="Sacada envidraçada instalada pela RA Acessórios e Vidraçaria"
+                alt="Box de banheiro em vidro instalado pela RA Acessórios e Vidraçaria"
                 fill
                 priority
                 sizes="(min-width: 1024px) 40vw, 100vw"

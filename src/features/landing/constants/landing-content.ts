@@ -1,6 +1,6 @@
 import balconyImage from "@/assets/images/glass_balcony_sacadas_1781832750337.jpg";
 import facadeImage from "@/assets/images/glass_facade_fachadas_1781832761890.jpg";
-import showerImage from "@/assets/images/glass_shower_box_1781832777334.jpg";
+import showerImage from "@/assets/images/boxDestaque.jpeg";
 
 import type {
   BudgetProduct,
