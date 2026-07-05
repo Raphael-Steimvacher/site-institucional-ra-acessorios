@@ -1,6 +1,6 @@
 import balconyDoorImage1 from "@/assets/images/balcão1.jpeg";
 import balconyDoorImage2 from "@/assets/images/balcão2.jpeg";
-import balconyDoorImage3 from "@/assets/images/balcão3.png";
+import balconyDoorImage3 from "@/assets/images/balcão3.png";
 import showerImage1 from "@/assets/images/box1.png";
 import balconyImage from "@/assets/images/glass_balcony_sacadas_1781832750337.jpg";
 import showerImage from "@/assets/images/boxDestaque.jpeg";
