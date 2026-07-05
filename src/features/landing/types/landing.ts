@@ -1,6 +1,13 @@
 import type { StaticImageData } from "next/image";
 
-export type WorkCategory = "sacadas" | "fachadas" | "banheiro";
+export type WorkCategory =
+  | "sacadas"
+  | "fachadas"
+  | "banheiro"
+  | "porta-balcao"
+  | "corrimao-vidro"
+  | "janelas-portas"
+  | "teto-vidro";
 
 export type WorkSlide = {
   id: string;
@@ -9,6 +16,8 @@ export type WorkSlide = {
   category: WorkCategory;
   description: string;
   image: StaticImageData;
+  imageFit?: "cover" | "contain";
+  imagePosition?: string;
   specs: string[];
 };
 

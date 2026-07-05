@@ -29,6 +29,10 @@ const FILTERS: { value: CatalogFilter; label: string }[] = [
   { value: "sacadas", label: "Sacadas" },
   { value: "fachadas", label: "Fachadas" },
   { value: "banheiro", label: "Box" },
+  { value: "porta-balcao", label: "Porta balcão" },
+  { value: "corrimao-vidro", label: "Corrimão" },
+  { value: "janelas-portas", label: "Janelas e portas" },
+  { value: "teto-vidro", label: "Teto de vidro" },
 ];
 
 export function CatalogSection() {
@@ -111,7 +115,10 @@ export function CatalogSection() {
           onValueChange={(value) => setActiveCategory(value as CatalogFilter)}
           className="mb-8"
         >
-          <TabsList aria-label="Filtrar projetos por categoria">
+          <TabsList
+            aria-label="Filtrar projetos por categoria"
+            className="w-full sm:w-auto"
+          >
             {FILTERS.map((filter) => (
               <TabsTrigger key={filter.value} value={filter.value}>
                 {filter.label}
@@ -138,7 +145,12 @@ export function CatalogSection() {
                       alt={activeSlide.title}
                       fill
                       sizes="(min-width: 1024px) 58vw, 100vw"
-                      className="object-cover"
+                      className={
+                        activeSlide.imageFit === "contain"
+                          ? "object-contain"
+                          : "object-cover"
+                      }
+                      style={{ objectPosition: activeSlide.imagePosition ?? "center" }}
                     />
                   </motion.div>
                 </AnimatePresence>
